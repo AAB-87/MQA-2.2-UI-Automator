@@ -108,17 +108,17 @@ class ChangeTextTest {
         ).click()
     }
 
-//    @Test
-//    fun testChangeText() {
-//        val packageName = MODEL_PACKAGE // В packageName помещаем константу (приложение)(см. выше)
-//        waitForPackage(packageName) // ожидание запуска приложения
-//
-//        device.findObject(By.res(packageName, "userInput")).text = textToSet // вводим текст содержащийся в переменной textToSet
-//        device.findObject(By.res(packageName, "buttonChange")).click() // кликаем по кнопке Change text
-//
-//        val result = device.findObject(By.res(packageName, "textToBeChanged")).text
-//        assertEquals(result, textToSet) // проверяем что обе переменные имеют одинаковые значения
-//    }
+    @Test
+    fun testChangeText() {
+        val packageName = MODEL_PACKAGE // В packageName помещаем константу (приложение)(см. выше)
+        waitForPackage(packageName) // ожидание запуска приложения
+
+        device.findObject(By.res(packageName, "userInput")).text = textToSet // вводим текст содержащийся в переменной textToSet
+        device.findObject(By.res(packageName, "buttonChange")).click() // кликаем по кнопке Change text
+
+        val result = device.findObject(By.res(packageName, "textToBeChanged")).text
+        assertEquals(result, textToSet) // проверяем что обе переменные имеют одинаковые значения
+    }
 
     @Test
     fun testEmptyText() {
